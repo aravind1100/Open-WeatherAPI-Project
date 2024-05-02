@@ -51,10 +51,11 @@ response
         //console.log(latlng)
         let lat = latlng[0];
         let lng = latlng[1];
+        const apiKey = process.env.API_KEY;
         //weather api getting and updating the lat lng api key to the api
         // add lat,ln and api key
         let weatherApi = fetch(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=a585dbb3be691ba6b8b1e484387ddc6d`
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${apiKey}`
         );
         weatherApi
           .then((data1) => data1.json())
